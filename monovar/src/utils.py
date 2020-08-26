@@ -40,6 +40,7 @@ import fileinput
 from contextlib import closing
 from base_q_ascii import Ascii_Table
 from alleles_prior import allele_prior
+from decimal import Decimal
 
 base_q_tbl = Ascii_Table()
 
@@ -112,8 +113,8 @@ class Utils_Functions:
         ncr_mat = np.zeros((max_allele_cnt, max_allele_cnt))
         for i in range(max_allele_cnt):
             for j in range(max_allele_cnt):
-                ncr_mat[j, i] = factorial_list[j] / \
-                    (factorial_list[i] * factorial_list[j - i])
+                ncr_mat[j, i] = Decimal( factorial_list[j] / \
+                    (factorial_list[i] * factorial_list[j - i]) )
         return ncr_mat
 
     def CheckAltAllele(self, single_cell_dict):

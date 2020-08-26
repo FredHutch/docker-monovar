@@ -7,5 +7,5 @@ This repo contains both a docker file for a docker image at dockerhub in fredhut
 ```
 docker tag ......... fredhutch/monovar:1.1
 docker push fredhutch/monovar:1.1
-
+docker run -itv /path/to/data/monovar:/mnt/mydata fredhutch/monovar:1.1
 ```

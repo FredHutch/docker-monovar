@@ -53,6 +53,8 @@ from nu_genotype_single_cell import Single_cell_genotype_records
 from mp_genotype import MP_single_cell_genotype
 from hzvcf import VCFRecord, VCFDocument, VRecord, VCF
 
+from decimal import Decimal
+
 # Required for using multiprocessing
 
 
